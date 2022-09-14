@@ -1,0 +1,9 @@
+.center {
+  grid-column-start: 2;
+  grid-column-end: 3;
+  text-align: center;
+}
+
+h1 {
+  text-align: center;
+}

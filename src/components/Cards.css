@@ -1,0 +1,125 @@
+/* Main section */
+.properties {
+  background-color: #ecf2ff;
+  margin-top: 2rem;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 1.5rem;
+}
+
+.property {
+  /* width: 90%; */
+  box-shadow: 0 0 10px rgb(169, 169, 169);
+  background-color: #fff;
+  border-radius: 10px;
+  position: relative;
+}
+
+.property-image {
+  width: 100%;
+  height: 15rem;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+}
+
+.popular-badge {
+  width: 6rem;
+  position: absolute;
+  left: -0.95rem;
+  top: 13rem;
+}
+
+input[type="checkbox"] {
+  appearance: none;
+  height: 2rem;
+  width: 2rem;
+  border-radius: 50%;
+  border: 1px solid var(--border-color);
+  background-color: transparent;
+  display: grid;
+  place-items: center;
+  cursor: pointer;
+}
+
+input[type="checkbox"]::after {
+  content: "\e87e";
+  font-family: "Material Icons";
+  transition: 1s content ease-in-out;
+  color: var(--icon-color);
+  font-size: 1.1rem;
+}
+
+input[type="checkbox"]:checked::after {
+  content: "\e87d";
+  color: var(--icon-color);
+}
+
+.favourites {
+  position: absolute;
+  right: 1rem;
+  top: 16rem;
+}
+
+.property-details {
+  padding: 1rem;
+}
+
+.price {
+  padding-top: 0.5rem;
+}
+
+.price span:nth-child(1) {
+  color: var(--icon-color);
+  font-size: 1.5rem;
+  font-weight: 700;
+}
+
+.price span:nth-child(2) {
+  color: rgb(108, 108, 108);
+  font-size: 0.9rem;
+  font-weight: 600;
+  padding-block: 0.5rem;
+}
+
+.property-name {
+  font-size: 1.5rem;
+  padding-block: 0.5rem;
+}
+
+.property-location {
+  color: rgb(108, 108, 108);
+  padding-bottom: 1rem;
+  border-bottom: 1px solid var(--border-color);
+}
+
+.property-descriptions {
+  color: rgb(108, 108, 108);
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  padding-block: 0.3rem;
+  font-size: 0.9rem;
+}
+
+.property-description span:nth-child(1) {
+  color: var(--icon-color);
+  position: relative;
+  top: 5px;
+}
+
+.center {
+  grid-column-start: 2;
+  grid-column-end: 2;
+}
+
+@media (max-width: 42rem) {
+  .properties {
+    display: block;
+  }
+}
+
+@media (max-width: 64.5rem) {
+  .properties {
+    grid-template-columns: 1fr 1fr;
+  }
+}

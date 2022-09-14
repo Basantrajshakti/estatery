@@ -1,0 +1,74 @@
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans:wght@300;400;500;600;800;900&display=swap");
+
+/* global styles */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: "Noto Sans", sans-serif;
+}
+
+:root {
+  --icon-color: #7f29ff;
+  --border-color: rgb(212, 212, 212);
+}
+
+body {
+  background-color: #ecf2ff;
+}
+
+/* Mainsection */
+main {
+  margin-block: 18vh 4vh;
+  padding-inline: 6rem;
+}
+
+/* Media queries */
+
+@media (max-width: 76rem) {
+  main {
+    padding-inline: 2rem;
+  }
+}
+
+@media (max-width: 64.5rem) {
+  .nav-item:last-child {
+    display: none;
+  }
+
+  .property-image {
+    height: 18rem;
+  }
+
+  .favourites {
+    top: 19rem;
+  }
+
+  .popular-badge {
+    top: 16rem;
+  }
+}
+
+@media (max-width: 42rem) {
+  .nav-item:not(.nav-item:nth-of-type(4)) {
+    display: none;
+  }
+
+  .property {
+    margin-bottom: 1.5rem;
+  }
+
+  .search-section {
+    flex-direction: column;
+  }
+
+  .search-place {
+    margin-top: 1rem;
+  }
+
+  .search-place i {
+    position: relative;
+    top: 0rem;
+    right: 2.2rem;
+  }
+}

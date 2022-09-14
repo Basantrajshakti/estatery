@@ -1,0 +1,105 @@
+/* header section  */
+header {
+  position: fixed;
+  height: 12vh;
+  width: 100%;
+  top: 0;
+  left: 0;
+  display: flex;
+  align-items: center;
+  border-bottom: 1px solid var(--border-color);
+  z-index: 1;
+  background-color: #ecf2ff;
+}
+
+header a {
+  text-decoration: none;
+  color: black;
+}
+
+.logo {
+  font-size: 1.3rem;
+  font-weight: 600;
+  margin-left: 3rem;
+}
+
+.logo i {
+  color: var(--icon-color);
+  margin-right: 0.5rem;
+}
+
+.nav-items {
+  margin-inline: 2rem;
+  cursor: pointer;
+}
+
+.nav-item {
+  font-size: 0.9rem;
+  font-weight: 500;
+  padding: 0.6rem 1rem;
+  margin-right: 0.2rem;
+}
+
+/* a[activeClassName="active"] {
+  text-decoration: none;
+} */
+
+.active {
+  text-decoration: none;
+  padding: 0.5rem 0rem;
+  background-color: #e8dafd;
+  color: var(--icon-color);
+}
+
+.nav-item:active,
+.nav-item:hover,
+.nav-item:hover select {
+  background-color: #e8dafd;
+  color: var(--icon-color);
+  cursor: pointer;
+}
+
+.nav-item select {
+  border: none;
+  outline: none;
+  background: transparent;
+  font-size: 0.9rem;
+}
+
+.nav-item select > option {
+  padding: 0.2rem 1rem;
+  color: rgb(0, 0, 0);
+  font-size: 0.8rem;
+}
+
+.auth {
+  position: absolute;
+  right: 2rem;
+}
+
+.auth button {
+  border: 1px solid var(--icon-color);
+  border-radius: 6px;
+  padding: 0.5rem 1rem;
+  font-size: 0.9rem;
+  font-weight: 600;
+  letter-spacing: 1px;
+}
+
+.login-btn {
+  background: transparent;
+  color: var(--icon-color);
+  margin-right: 0.5rem;
+}
+
+.signup-btn {
+  background-color: var(--icon-color);
+  color: white;
+}
+
+@media (max-width: 38rem) {
+  .nav-items,
+  .auth {
+    display: none;
+  }
+}
